@@ -1,15 +1,11 @@
-// OPERATORS
+//*****************************OPERATORS*************************************************/
 // Les opérateurs sont des symboles qui permettent de manipuler des variables,
 // c'est-à-dire effectuer des opérations, les évaluer, ...
 // les opérateurs sont utilises sur les variables pour créer des expressions
 // les expressions a leur tour servent a créer les algorithmes
+
+//************************************************************************************* */
 // On distingue plusieurs types d'opérateurs :
-
-// les opérateurs bit-à-bit
-
-// les opérateurs de rotation de bit
-// les opérateurs de manipulation de chaînes de caractères
-
 // les opérateurs de calcul
 let x = 10;
 let y = 3;
