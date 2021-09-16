@@ -6,7 +6,6 @@
 // On distingue plusieurs types d'opérateurs :
 
 // les opérateurs bit-à-bit
-
 // les opérateurs de rotation de bit
 // les opérateurs de manipulation de chaînes de caractères
 
