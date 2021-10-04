@@ -60,11 +60,11 @@ let third = [2, 6, 3, 8, 9, 4, 5];
 third = third.slice(1, 4); // Inclus les element en partant de l''index 1 a l''index 3
 console.log(third);
 
-// COPIE TOUS LES ELEMENTS D"UN ARRAY
+// CLONER OU COPIER TOUS LES ELEMENTS D"UN ARRAY
 let numbers = [3, 4, 3, 6, 8, 9, 4];
 //1. methode1
 // let copy = numbers;
-//2. methods
+//2. methods //*****RECOMMANDÉ*****
 // let copy = [...numbers];
 //3. avec slice
 let copy = numbers.slice();

@@ -33,17 +33,19 @@ let val = function (val1, val2) {
 };
 console.log(val(3,6));
 
+// PASSER DES PARAMÈTRES PAR DÉFAUT
+//1. sont tjrs les derniers paramètres
+//2. Il peut etre remplace par un argument
+function temp(m, k, pi=Math.PI, x=5){
+  return 2*pi*Math.sqrt(m/k);
+}
+console.log(temp(10,5, 3));
 
-//Le nom de la fonction (facultatif).
-//1. Expression de fonction nommée:
-var maFonction = function fonctionNommée() {
-  /* instructions */
-};
-//2. Expression de fonction anonyme
-var maFonction = function () {
-  /* instructions */
-};
-
+/* EXPRESSION DE FONCTION INVOQUE IMMÉDIATEMENT
+une fonction JavaScript qui est exécutée dès qu'elle est définie. */
+(function (param1, param2) {
+  console.log(param1 * param2);
+})(2,3);
 
 /* HOISTING: 
 remonter, élever, hisser. 
@@ -58,15 +60,7 @@ function calc(val1, val2) {
   return Math.pow(val1, val2);
 }
 
-// PASSER DES PARAMÈTRES PAR DÉFAUT
-//1. sont tjrs les derniers paramètres
-//2. Il peut etre remplace par un argument
-function temp(m, k, pi=Math.PI, x=5){
-  return 2*pi*Math.sqrt(m/k);
-}
-console.log(temp(10,5, 3));
-
-/* fonction fléchée 
+/* FONCTION FLÉCHÉE
 (arrow function en anglais) 
 permet d’avoir une syntaxe plus courte que les expressions de fonction
  et ne possède pas ses propres valeurs pour this, arguments, super, ou new.target. 
@@ -84,25 +78,20 @@ permet d’avoir une syntaxe plus courte que les expressions de fonction
     4. enlever {}
  */
 
-
 let calc = function (value) {
   console.log(value);
 }
-let calc = (value) => console.log(value);
-let calc = () => console.log("C'est une fonction flechee sans variable");
+let calc = value => console.log(value);
+let calc = () => console.log;
 let calc = (value1, value2) => {
   console.log(value1);
   console.log(value2);
 }
-
 let val= val1 => val1*val1;
 console.log(val(3,3));
 
-
-
-
 // *******************************************
-  // L'OPERATEUR REST: ..args
+  // L'OPÉRATEUR REST: ...args
 // Permet de creer une fonction avec un nombre varie de parametres
 // ...args est un array
 //...args doit tjrs être le dernier paramètre
@@ -117,47 +106,6 @@ function sum(...args) {
   }
   
   console.log(sum(0.1, 20, 30, 1));
-
-  // LES PARAMETRES PAR DEFAUT
-
-// NB: les parametres par defaut doievent etre les derniers
-
-function interest(principal, rate = 3.5, years = 5) {
-    return ((principal * rate) / 100) * years;
-  }
-    console.log(interest(1000));
-
-/* IMMEDIATELY INVOKED FUNCTION EXPRESSION(IIFE): 
-EXPRESSION DE FONCTION INVOQUE IMMÉDIATEMENT
-une fonction JavaScript qui est exécutée dès qu'elle est définie. */
-
-(function(){
-  console.log('IIFE Ran..');
-})();
-
-(function(name){
-  console.log('Hello '+ name);
-})('Brad');
-
-// PROPRIÉTÉ MÉTHODE:
-//1. Approche 1:
-const todo = {
-  add: function(){//une méthode
-    console.log('Add todo..'); //
-  },
-  edit: function(id){//une autre méthode
-    console.log(`Edit todo ${id}`);
-  }
-}
-//2. Approche 2:
-todo.delete = function(){ //une aure méthode
-  console.log('Delete todo...');
-}
-
-todo.add();
-todo.edit(22);
-todo.delete();
-
 
 /* MUTATEUR(SETTER) & ACCESSEURS (GETTERS)
 En JavaScript, un mutateur (ou setter en anglais) peut être utiisé

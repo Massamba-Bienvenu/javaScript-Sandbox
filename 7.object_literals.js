@@ -6,6 +6,7 @@ maVoiture.fabricant = "ford";
 maVoiture.modele = "Mustang";
 maVoiture.annee = 1969;
 
+//Les objets sont dynamiques: on peut les modifier
 //Methode 2:
 let maVoiture = {
   fabricant: "ford",
@@ -16,9 +17,9 @@ let maVoiture = {
   },
 };
 
-// Operateur delete: supprime une propriete dans un objet
+// Opérateur delete: supprime une propriété dans un objet
 delete maVoiture.fabricant;
-delete maVoiture.meth; //pas besoin de ()
+delete maVoiture.meth; //pas besoin de () pour les methodes
 
 //Exemple:
 const person = {
@@ -37,7 +38,7 @@ const person = {
   },
 };
 
-// acceder aux propretes et methodes d'un objet:
+// acceder aux propretés et méthodes d'un objet:
 let val;
 val = person;
 val = person.fistName;
@@ -54,33 +55,81 @@ console.log(val);
 
 // FONCTION CONSTRUCTEUR ET FONCTION USINE
 // FONCTION USINE:
-function createCircle(radius) {
+// fonction usine
+function createCar(annee) {
   return {
-    radius: radius, // ou radius, tout simplement
-    draw() {
-      console.log("daw");
+    fabricant: "Toyota",
+    annee: annee,
+    color: "jaune",
+    drive: function (params) {
+      console.log(params);
     },
   };
 }
-// Appelons le constructeur
-const circle1 = createCircle(1);
-console.log(circle1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+function createCar(color, annee = 1980) {
+  return {
+    fabricant: "Toyota",
+    annee, //annee:annee, ecrire juste annee,
+    color,
+    drive: function (params) {
+      console.log(params);
+    },
+  };
+}
+car1 = createCar("Bleu");
+car2 = createCar("Rouge", 1970);
+console.log("car1 = ", car1, "\n", "Car2 = ", car2);
 
 //FONCTION CONSTRUCTEUR
-//1. le nom de la fonction doit être en notation Pascal
-function Circle(radius) {
-  //utiliser this. pour initialiser l'objet
-  this.radius = radius;
-  this.draw = function () {
-    console.log("draw");
+// fonction constructeur
+function CreateCar(color, annee = 1980) {
+  this.fabricant = "Toyota";
+  this.annee = annee;
+  this.color = color;
+  this.drive = function (params) {
+    console.log(params);
   };
-  return this; //pas nécessaire car new va le faire
+  return this; //pas necessaire
 }
+const car1 = new CreateCar("white");
+const car2 = new CreateCar("yellow", 2010);
+const car3 = new CreateCar("Vert", 1978);
+console.log(car1, car2, car3);
+console.log(car1.constructor); // Afficher le construteur de l'objet
 
+/* LA PROPRIÉTÉ constructor
+chaque Object en javascript possède une propriété appel: .constructor;
+elle fait référence vers la fonction qui a construit l'objet. */
 const circle = new Circle(1);
-//new cree un object js vide: const x = {}
-//this pointe a cet objet vide
-//new ajout return this apres la function
+console.log(circle.constructor);
+
+//CLONER UN OBJET: object.assign
+const biblotheque = {
+  nom: "Massbib",
+  adress: "20 rue des scouts",
+  tel: "00242 06 636 81 84",
+};
+
+const livre = {
+  titre: "Ma foi",
+  annee: 2021,
+  autheur: "DivinSIlo",
+};
+
+//Methode 1: utiliser Obejct.assign
+let autreLivre = Object.assign(
+  {
+    prix: 123,
+  },
+  biblotheque,
+  livre
+);
+
+//methode 2: utiliser l'operateur ...spread
+autreLivre = {
+  prix: 128,
+  ...biblotheque,
+  ...livre,
+};
+console.log(autreLivre);
