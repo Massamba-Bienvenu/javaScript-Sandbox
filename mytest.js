@@ -1,1 +1,1 @@
-let val = (cal1,cal2) => cal1 * cal2; console.log(val(3,6)); 
+let kjs

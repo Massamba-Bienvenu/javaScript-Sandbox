@@ -1,3 +1,20 @@
+// LITTÉRAUX:
+//Les littéraux sont utilisés pour représenter des valeurs en JavaScript:
+/*
+Littéraux de tableaux
+Littéraux booléens
+Littéraux numériques
+Littéraux d'objets
+Littéraux de chaînes de caractères
+Littéraux de gabarits
+ */
+
+// Les littéraux de chaînes de caractères
+/* Un littéral de chaîne de caractères consiste en zéro ou 
+plusieurs caractères encadrés par des guillemets droits doubles (") 
+ou des guillemets droits simples ('). 
+ */
+
 const firstName = "William";
 const lastName = "johnson";
 const age = 36;
@@ -10,7 +27,11 @@ val = firstName + " " + lastName + " " + "a" + " " + age + " " + "ans";
 val = "Brad ";
 val += "Traversy";
 
-//Template strings : insérer des variables dans une chaîne de caractère
+// Littéraux de gabarits(Template strings) `...${variable}...`
+/* Les littéraux de gabarits sont des littéraux de chaînes de caractères 
+permettant d'insérer des variables dans une chaîne de caractère.
+NB: pas besoin de \n pour une nouvelle ligne juste aller sur la ligne
+ */
 val = `${firstName} est plus petit que ${lastName} car il a ${age} ans`;
 
 // Escaping
