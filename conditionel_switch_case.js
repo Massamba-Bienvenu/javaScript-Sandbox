@@ -76,7 +76,7 @@ switch(new Date().getDay()){
 console.log(`Today is ${day}`);
 
 //Regrouper différents cas pour exécuter une unique opération
-var animal = "girafe";
+let  animal = "girafe";
 switch (animal) {
   case "vache":
   case "girafe":

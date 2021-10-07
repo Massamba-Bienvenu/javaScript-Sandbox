@@ -1,13 +1,13 @@
-/* Les boucles permettent de répéter des actions simplement et rapidement. */
-/* Voici les différentes boucles fournies par JavaScript :
+/* Les boucles permettent de répéter des actions simplement et rapidement.
+Voici les différentes boucles fournies par JavaScript :
 
 BOUCLE for
 BOUCLE while
 BOUCLE do...while
 BOUCLE for...in
-BOUCLE for...of */
+BOUCLE for...of
 
-/* LA BOUCLE FOR:
+LA BOUCLE FOR:
 Une boucle for répète des instructions 
 jusqu'à ce qu'une condition donnée ne soit plus vérifiée. 
 
@@ -21,20 +21,11 @@ for (let i = 0; i < 5; i++) {
 for (let i = 0; i < 10; i++) {
   if (i === 2) {
     console.log("2 is my favorite number");
-    continue;
-  }
-  if (i === 5) {
+  } else if (i === 5) {
     console.log("Stop the loop");
     break;
   }
   console.log("Number " + i);
-}
-
-// Exo: afficher sur la console tous les nombres impaires
-// entre 1 2t 20
-
-for (let i = 1; i <= 20; i++) {
-  if (i % 2 === 0) console.log(i);
 }
 
 // BOUCLE while:
@@ -45,19 +36,29 @@ while (i < 10) {
   console.log("Number " + i);
   i++;
 }
+
 // Exo: afficher sur la console tous les nombres impaires
-// entre 1 2t 20
+// entre 1 t 20
+let i = 1;
+while (i <= 20) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+  i++;
+}
 
 // BOUCLE do...while (****Tres rarement utilise**)
 /* « do...while » signifie « faire... tant que »). 
 do
   instruction
 while (condition); */
-let i = 100;
+let i = 1;
 do {
-  console.log("Number " + i);
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
   i++;
-} while (i < 10);
+} while (i <= 20);
 
 // BOUCLES INFINIES
 //boucle while infinie
@@ -75,24 +76,18 @@ do {
 // boucle for infinie
 for (let i = 0; i < 10; ) {}
 
-/* BOUCLE FOR IN
-L'instruction for...in permet d'itérer sur l'ensemble
-des propriétés énumérables d'un objet sur les elements d'un tableau. 
-Pour chaque propriété, JavaScript exécutera l'instruction indiquée
-
-for (propriété dans objet) {
-  instruction
-}
+/* BOUCLE FOR...IN
+Est utilisée pour itérer sur les propriétés énumérables d'un objet.
 */
 const person = {
   name: "Mass",
   age: 18,
 };
-// Afficher les c d'un objet:
+// Afficher les clefs d'un objet:
 for (let key in person) {
   console.log(key);
 }
-// Afficher les valeurs des propriétés:
+// Afficher les noms, valeurs des propriétés:
 for (let key in person) {
   console.log(key, person[key]);
 }
@@ -107,15 +102,16 @@ for (let x in user) {
 }
 
 const user = {
-    firstName: 'John', 
-    lastName: 'Doe',
-    age: 40
-  }
-    for(let x in user){
-    console.log(`${x} : ${user[x]}`);
-  }
+  firstName: "John",
+  lastName: "Doe",
+  age: 40,
+};
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
+}
 
-  // BOUCLE FOR...OF: NOUVEAU SUR ECMASCRIPT
-  colors = ["blue", "green","red"]
-  for (let color of colors)
-  console.log(color);
+// BOUCLE FOR...OF: NOUVEAU SUR ECMASCRIPT
+colors = ["blue", "green", "red"];
+for (let element of colors){
+  console.log(element);
+}

@@ -1,8 +1,8 @@
 //Creation des Arrays
 //Methode 1
-let numbers2 = new Array(22, 45, 33, 76, 54);
+let numbers = new Array(22, 45, 33, 76, 54);
 //Methode 2
-let numbers = [43, 56, 33, 23, 44, 36, 5];
+numbers = [43, 56, 33, 23, 44, 36, 5];
 console.log(typeof numbers2);
 
 //Les arrays peuvent contenir un melanges de donnees
@@ -11,12 +11,11 @@ console.log(mixed);
 
 // LES PROPRIÉTÉS
 // .length: nombre total d'éléments dans cet array
-numbers = numbers.length;
-console.log(numbers);
+numbers = [43, 56, 33, 23, 44, 36, 4, 8, 5];
+console.log(numbers.length);
 
 //Array.isArray(): Connaître si un objet est un array:
-numbers = Array.isArray(numbers);
-console.log(numbers); //True or false
+console.log(Array.isArray(numbers)); //True or false
 
 //obtenir un element a partir de son index
 numbers = numbers[0]; // obtiens element a l'index 0
@@ -43,7 +42,7 @@ let splice;
 
 // 1. Utilisation de .splice() pour supprimer des elements dans un array
 // .splice(indexDeDepart, nombre_elements_supprime)
-splice = array.splice(0, 2); // Retourne les elements supprimes
+splice = array.splice(0, 2); // Retourne les elements supprimes dsns un array
 console.log(array, splice);
 
 //2. utilisation de .splice() pour ajouter des elements dans array:
