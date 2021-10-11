@@ -1,11 +1,12 @@
-let array = ["a", "b", "c", "d", "c", "e", "f", "a", "g"];
-elementsSupprimes = array.splice(0, 3);
-// console.log(elementsSupprimes, array);
+// let numbers = [5, 7, 9, 3, 6, 2];
+// numbers.forEach(function(nombre, nombre_index) {
+//     console.log(`${nombre}: a pour index ${nombre_index}`);
+// })
 
-for (let elemSup of elementsSupprimes) {
-  for (let elemArr of array) {
-    if (elemSup !== elemArr) {
-      console.log(elemSup);
-    }
-  }
-}
+const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+courses.forEach((object, object_index) =>
+  console.log(`${object.name}: a pour index ${object_index}`)
+);

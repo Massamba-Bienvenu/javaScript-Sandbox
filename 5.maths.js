@@ -2,26 +2,44 @@ const num1 = 100;
 const num2 = 50;
 let val;
 
-// Simple math with numbers
+// Calculs simples:
 val = num1 + num2;
 val = num1 * num2;
 val = num1 - num2;
 val = num1 / num2;
-val = num1 % num2; //Modulus
+val = num1 % num2;
 
-// Math Object
+//  Les fonctions arithmétiques
 val = Math.PI;
-//val = Math.E;
-val = Math.round(2.4);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
+//Limiter le nombre de chiffres apres une virgule;
+// console.log(val.toFixed(2));
+val = Math.abs(-23.5);
+// Connaître le sign d'un nombre
+val = Math.sign(-23.5);
+val = Math.sign(23.5);
+val = Math.sign(0);
+
+// Retourne l’entier arrondi supérieur de a
+val = Math.ceil(2.3);
+// Retourne l’entier arrondi inférieur de a
+val = Math.floor(2.3);
+//Retourne l’entier arrondi le plus proche de a
+val = Math.round(2.5);
+val = Math.round(2.3);
+//Retourne le plus petit des paramètres
+val = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
+//Retourne le plus grand des paramètres
+val = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
+// Racine carrée(square root:sqrt)
 val = Math.sqrt(64);
-val = Math.abs(-3);
-val = Math.pow(8, 2);
-val = Math.min(2,33,4,1,55,6,3,-2);
-val = Math.max(2,33,4,1,55,6,3,-2);
+// Puissance(power)
+val = Math.pow(8, 3);
+//Nombre aleatoire entre 0 et 1
 val = Math.random();
-
-val = Math.floor(Math.random() * 20 + 1);
-
+//Nombre aleatoire avec un plafond 20.
+// val = Math.random() * 20;
+val = Math.round(Math.random() * 20);
+// console.log(val.toFixed(2));
+// console.log(Math.floor(val));
+// console.log(Math.ceil(val));
 console.log(val);

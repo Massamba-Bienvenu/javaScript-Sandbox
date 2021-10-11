@@ -1,9 +1,9 @@
-//Creation des Arrays
+//CREATION DES ARRAYS
 //Methode 1
 let numbers = new Array(22, 45, 33, 76, 54);
 //Methode 2
 numbers = [43, 56, 33, 23, 44, 36, 5];
-console.log(typeof numbers2);
+console.log(typeof numbers);
 
 //Les arrays peuvent contenir un melanges de donnees
 let mixed = [22, "Hello", true, undefined, null, { a: 1, b: 1 }, new Date()];
@@ -32,17 +32,17 @@ numbers.unshift(1, 2);
 
 // SUPPRIMER DES ELEMENTS DANS UN ARRAY
 //1. a la fin:
-numbers.pop(5);
+numbers.pop();
 //2. au debut
-numbers.shift(2);
+numbers.shift();
 
 // EXCLURE D'ELEMENTS AVEC .splice();
 let array = ["a", "b", "c", "d", "e", "f", "g"];
 let splice;
 
-// 1. Utilisation de .splice() pour supprimer des elements dans un array
+// 1. .splice() pour extraire des elements d'un array
 // .splice(indexDeDepart, nombre_elements_supprime)
-splice = array.splice(0, 2); // Retourne les elements supprimes dsns un array
+splice = array.splice(0, 2); // Retourne les elements supprimes dans un array
 console.log(array, splice);
 
 //2. utilisation de .splice() pour ajouter des elements dans array:
@@ -76,7 +76,7 @@ console.log(copy);
 //https://www.agence-churchill.fr/blog/convertir-leads/
 
 let array = ["convertir", "leads"];
-//.join() : converti en string avec separateur la virgue
+//.join() : converti en string avec séparateur une virgule
 let joined = array.join("-");
 //.join("-ou,ou..."): converti en string et ajoute le séparateur spécifié entre les string
 console.log(array, joined, typeof joined);
@@ -93,24 +93,20 @@ numbers.splice(0, numbers.length);
 
 // COMBINAISON DES ARRAYS
 //1. Utiliser la méthode concat
-let first = [1, 2, 4];
+let first = [1, 2, 3];
 let second = [4, 5, 6];
 let combined = first.concat(second);
 //2. Utiliser l'opérateur spread
 let combined = [...first, "a", ...second, "b"];
 
-// COMBINAISON DES ARRAYS
-let first = [1, 2, 4];
-let second = [5, 6, 7];
-
-// insertion d'une valeur dans array:
-numbers[2] = 100; //100 swera le troisime element dans l'array
+// Remplacer une valeur en utilisant son index:
+numbers[2] = 100; //100 sera le troisième element dans l'array
 // console.log(numbers);
 
 // Sorting = triage croissant de valeurs string
 const fruit = ["pear", "Apple", "orange", "Banana"];
 // console.log(fruit.sort());
-//triage décroissant
+// triage décroissant
 // console.log(fruit.sort().reverse());
 
 //Sorting numbers croissant

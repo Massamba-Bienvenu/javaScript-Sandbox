@@ -33,6 +33,7 @@ let val = function (val1, val2) {
 };
 console.log(val(3,6));
 
+// ##############################################################################
 // PASSER DES PARAMÈTRES PAR DÉFAUT
 //1. sont tjrs les derniers paramètres
 //2. Il peut etre remplace par un argument
@@ -41,25 +42,25 @@ function temp(m, k, pi=Math.PI, x=5){
 }
 console.log(temp(10,5, 3));
 
+// ##############################################################################
 /* EXPRESSION DE FONCTION INVOQUE IMMÉDIATEMENT
 une fonction JavaScript qui est exécutée dès qu'elle est définie. */
 (function (param1, param2) {
   console.log(param1 * param2);
 })(2,3);
-
+// ##############################################################################
 /* HOISTING: 
 remonter, élever, hisser. 
-Avant d'être exécuté, l'interpréteur va 
-remonter toutes les déclarations de variables et de fonctions 
-tout en haut.
-On peut appeler une fonction avant d'etre definie
-Le Hoisting(Hissage) ne marche qu'avec les expressions de fonction:
+Avant d'être exécuté, l'interpréteur va remonter 
+toutes les déclarations de variables et de fonctions tout en haut.
+On peut appeler une fonction avant d'être définie
+Le Hoisting(Hissage) ****ne marche qu'avec les expressions de fonction:****
  */
 console.log(calc(2, 10));
 function calc(val1, val2) {
   return Math.pow(val1, val2);
 }
-
+// ##############################################################################
 /* FONCTION FLÉCHÉE
 (arrow function en anglais) 
 permet d’avoir une syntaxe plus courte que les expressions de fonction
@@ -81,18 +82,18 @@ permet d’avoir une syntaxe plus courte que les expressions de fonction
 let calc = function (value) {
   console.log(value);
 }
-let calc = value => console.log(value);
+//1. Avec zero paramètres
 let calc = () => console.log;
+//2. Avec un seul paramètre
+let calc = value => console.log(value);
+//3. Avec plusieurs parametres et plusieurs declarations
 let calc = (value1, value2) => {
   console.log(value1);
   console.log(value2);
 }
-let val= val1 => val1*val1;
-console.log(val(3,3));
-
-// *******************************************
-  // L'OPÉRATEUR REST: ...args
-// Permet de creer une fonction avec un nombre varie de parametres
+// ##############################################################################
+// L'OPÉRATEUR REST: ...args
+// Permet de créer une fonction avec un nombre varie de parametres
 // ...args est un array
 //...args doit tjrs être le dernier paramètre
 function sum(...args) {

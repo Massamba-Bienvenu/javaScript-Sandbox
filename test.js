@@ -1,18 +1,3 @@
-let numbers = [3, 4, 3, 6, 8, 9, 4];
-
-
-
-//TRIER DES ARRAYS
-//1. Trier par ordre croissant
-let numbers = [1, 2, 5, 6, 4];
-numbers.sort();
-console.log(numbers);
-
-//2. Inverser
-let numbers = [1, 2, 5, 6, 4];
-numbers.reverse();
-console.log(numbers);
-
 //TESTER LES ELEMENTS D"UN ARRAY
 // verifier si tous les nombres sont positifs
 let numbers = [1, 2, 5, 6, 4];
@@ -20,9 +5,10 @@ let allPositive = numbers.every(function (value) {
   return value >= 0;
 });
 console.log(allPositive); //true
+
 //verifier s'il ya au moins un nombre négatif
 let numbers = [1, 2, 5, -6, 4];
-let atLestOneNegative = numbers.some(function (value) {
+let atLeastOneNegative = numbers.some(function (value) {
   return value <= 0;
 });
 console.log(atLestOneNegative); //true
@@ -52,11 +38,9 @@ let sum = numbers.reduce(function (accumulator, currentValue) {
 console.log(sum);
 // TROUVER DES ELEMENTS PRIMITIFS DANS UN ARRAY
 //1. Trouver si un element existe dans un array
-console.log(numbers.indexOf(3) !== -1); //True or false
 console.log(numbers.includes(3)); //True or False (meilleure)
 //2. L'index d''un element
-console.log(numbers.indexOf(5)); // donne l'index de 5
-console.log(numbers.indexOf("5")); //?
+console.log(numbers.indexOf(3)); // donne l'index de 5
 //3. l'index du dernier element similaire
 console.log(numbers.lastIndexOf(3));
 
@@ -71,18 +55,12 @@ const courses = [
 const course = courses.find(function (course) {
   return course.name === "a";
 });
-const course = courses.find(function (course) {
-  return course.name === "xyz";
-}); //?
 //Trouver l'index d'une reference dans un array
 const course = courses.findIndex(function (course) {
   return course.name === "a";
 });
-const course = courses.findIndex(function (course) {
-  return course.name === "xyz";
-});
 
-// ITÉRER SUR UN ARRAY
+
 let numbers = [5, 7, 9, 3, 6, 2];
 //1.
 numbers.forEach(function (number) {
