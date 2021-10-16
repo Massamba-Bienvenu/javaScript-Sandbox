@@ -1,54 +1,54 @@
 let val;
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+const list = document.querySelector("ul.collection");
+const listItem = document.querySelector("li.collection-item:first-child");
 
 val = listItem;
 val = list;
 
-// Get child nodes
+// obtenir tous les Nœuds Enfants incluant les sauts de ligne
 val = list.childNodes;
 val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
 val = list.childNodes[3].nodeType;
 
-// 1 - Element
-// 2 - Attribute (deprecated)
-// 3 - Text node
+// 1 - Element(element html)
+// 2 - Attribute (obsolète)
+// 3 - Text node (Saut de ligne)
 // 8 - Comment
 // 9 - Document itself
 // 10 - Doctype
 
-
-// Get children element nodes
+// Obtenir les nœuds d'éléments uniquement
 val = list.children;
 val = list.children[1];
-list.children[1].textContent = 'Hello';
-// Children of children
-list.children[3].children[0].id = 'test-link';
+list.children[1].textContent = "Hello";
+
+// Enfants d'enfants
+list.children[3].children[0].id = "test-link";
 val = list.children[3].children[0];
 
-// First child
+// Premier enfant
 val = list.firstChild;
 val = list.firstElementChild;
 
-// Last child
+// Dernier enfant
 val = list.lastChild;
 val = list.lastElementChild;
 
-// Count child elements
+// Compter les éléments enfants
 val = list.childElementCount;
 
-// Get parent node
+// Obtenir le nœud parent
 val = listItem.parentNode;
 val = listItem.parentElement;
 val = listItem.parentElement.parentElement;
 
-// Get next sibling
+// Obtenez le prochain frère
 val = listItem.nextSibling;
 val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
-// Get prev sibling
+// Obtenir le frère précédent
 val = listItem.previousSibling;
 val = listItem.previousElementSibling;
 console.log(val);

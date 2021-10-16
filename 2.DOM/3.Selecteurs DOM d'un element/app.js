@@ -1,4 +1,4 @@
-// METHODE 1: document.getElementById()
+// METHODE 1:  .getElementById()
 // console.log(document.getElementById('task-title'));
 
 // // Obtenez des choses de l'élément
@@ -8,7 +8,7 @@
 // const taskTitle = document.getElementById('task-title');
 
 // // Changer de style
-// taskTitle.style.background = '#333';
+// taskTitle.style.backgroundColor = '#333';
 // taskTitle.style.color = '#fff';
 // taskTitle.style.padding = '5px';
 // // taskTitle.style.display = 'none';
@@ -30,4 +30,4 @@ document.querySelector("li:last-child").style.color = "red";
 document.querySelector("li:nth-child(3)").style.color = "yellow";
 document.querySelector("li:nth-child(4)").textContent = "Hello World";
 document.querySelector("li:nth-child(odd)").style.background = "#ccc";
-document.querySelector("li:nth-child(even)").style.background = "#f4f4f4";
+document.querySelector("li:nth-evenchild()").style.background = "#f4f4f4";

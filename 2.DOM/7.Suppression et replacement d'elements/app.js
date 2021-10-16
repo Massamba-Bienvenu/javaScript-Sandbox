@@ -1,31 +1,31 @@
 // REPLACE ELEMENT
 
-// Create Element
+// Créer un élément
 const newHeading = document.createElement('h2');
-// Add id
+// Ajouter une pièce d'identité
 newHeading.id = 'task-title';
-// New text node
+// Nouveau noeud de texte
 newHeading.appendChild(document.createTextNode('Task List'));
 
-// Get the old heading
+// Obtenir le vieil en-tête
 const oldHeading = document.getElementById('task-title');
 //Parent
 const cardAction = document.querySelector('.card-action');
 
-// Replace
+// Remplacer
 cardAction.replaceChild(newHeading, oldHeading);
 
-// REMOVE ELEMENT
+// Supprimer l'élément
 const lis = document.querySelectorAll('li');
 const list = document.querySelector('ul');
 
-// Remove list item
+// Supprimer l'élément de la liste
 lis[0].remove();
 
-// Remove child element
+//Supprimer l'élément enfant
 list.removeChild(lis[3]);
 
-// CLASSES & ATTR
+// Classes & attr
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
@@ -39,7 +39,7 @@ link.classList.add('test');
 link.classList.remove('test');
 val = link;
 
-// Attributes
+// Les attributs
 val = link.getAttribute('href');
 val = link.setAttribute('href', 'http://google.com');
 link.setAttribute('title', 'Google');

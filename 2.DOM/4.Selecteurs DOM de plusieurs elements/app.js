@@ -6,9 +6,6 @@
 // items[0].style.color = 'red';
 // items[3].textContent = 'Hello';
 
-// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
-// console.log(listItems);
-
 // document.getElementsByTagName
 // let lis = document.getElementsByTagName('li');
 // console.log(lis);

@@ -1,29 +1,31 @@
-// Create element
-const li  = document.createElement('li');
+// creer un Elementent
+const li = document.createElement("li");
 
-// Add class
-li.className = 'collection-item';
+// Ajouter une classe
+li.className = "collection-item";
 
-// Add id
-li.id = 'new-item';
+// Ajouter une d'identité
+li.id = "new-item";
 
-// Add attribute
-li.setAttribute('title', 'New Item');
+// Ajouter un attribut
+li.setAttribute("title", "New Item");
 
-// Create text node and append
-li.appendChild(document.createTextNode('Hello World'));
+// Créer un noeud de texte et ajouter
+li.appendChild(document.createTextNode("Hello World"));
 
-// Create new link element
-const link = document.createElement('a');
-// Add classes
-link.className = 'delete-item secondary-content';
-// Add icon html
+// Créer un nouvel élément de lien
+const link = document.createElement("a");
+
+// Ajouter des classes
+link.className = "delete-item secondary-content";
+
+// Ajouter l'icône HTML
 link.innerHTML = '<i class="fa fa-remove"></i>';
 
-// Append link into li
+// Ajouter un lien dans LI
 li.appendChild(link);
 
-// Append li as child to ul
-document.querySelector('ul.collection').appendChild(li);
+// Ajouter Li comme enfant à ul
+document.querySelector("ul.collection").appendChild(li);
 
 console.log(li);
