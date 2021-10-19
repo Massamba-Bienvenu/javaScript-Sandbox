@@ -1,51 +1,47 @@
-// REPLACE ELEMENT
+// REPLACER ELEMENT
+const parent = document.querySelector(".card-action");
+const ancienTitre = document.getElementById("task-title");
+const nouveauTitre = document.createElement("h2");
+nouveauTitre.id = "task-title";
+nouveauTitre.appendChild(document.createTextNode("faite votre choix"));
+parent.replaceChild(nouveauTitre, ancienTitre);
 
-// Créer un élément
-const newHeading = document.createElement('h2');
-// Ajouter une pièce d'identité
-newHeading.id = 'task-title';
-// Nouveau noeud de texte
-newHeading.appendChild(document.createTextNode('Task List'));
-
-// Obtenir le vieil en-tête
-const oldHeading = document.getElementById('task-title');
-//Parent
-const cardAction = document.querySelector('.card-action');
-
-// Remplacer
-cardAction.replaceChild(newHeading, oldHeading);
-
-// Supprimer l'élément
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
-
-// Supprimer l'élément de la liste
+// 2 Méthodes de suppressions de noeuds
+// Méthodes 1: Supprimer l'élément de la liste de noeud
+const lis = document.querySelectorAll("li");
 lis[0].remove();
 
-//Supprimer l'élément enfant
+// Methodes 1: Supprimer l'élément enfant
+const list = document.querySelector("ul");
 list.removeChild(lis[3]);
 
 // Classes & attr
-const firstLi = document.querySelector('li:first-child');
+const firstLi = document.querySelector("li:first-child");
 const link = firstLi.children[0];
 
 let val;
 
 // Classes
+//className (string) affiche tous toutes les classes
 val = link.className;
+// obtenir les noms de classe sous form de tableau
 val = link.classList;
 val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
+// ajouter une classe
+link.classList.add("test");
+//supprimer une classe
+link.classList.remove("test");
 val = link;
 
 // Les attributs
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
-
-console.log(val);
-
+// Obtenir la valeur d'un attribut
+val = link.getAttribute("href");
+// retourne un booléen(true ou false)
+val = link.hasAttribute("href");
+// ajouter un attribut
+link.setAttribute("title", "Google");
+// modifier un attribut
+link.setAttribute("href", "http://google.com");
+//supprimer un attribut
+link.removeAttribute("title");
+console.log(link);
