@@ -1,7 +1,3 @@
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
-const heading = document.querySelector('h5');
-
 // Click
 // clearBtn.addEventListener('click', runEvent);
 // Doubleclick
@@ -19,13 +15,16 @@ const heading = document.querySelector('h5');
 // Mouseout
 // card.addEventListener('mouseout', runEvent);
 // Mousemove
+
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
 card.addEventListener('mousemove', runEvent);
 
-// Event Handler
+// Gestionnaire d'événement
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
-
   heading.textContent= `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
-
   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 }

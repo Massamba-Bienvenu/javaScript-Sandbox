@@ -12,12 +12,13 @@ val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
 val = list.childNodes[3].nodeType;
 
-// 1 - Element(element html)
+// 1 - ELEMENT_NODE(Un noeud Element  tel que <p> ou <div>)
+// 3 - TEXT_NODE (Le Text actuel de l'Element ou Attr)
+// 9 - DOCUMENT_NODE (Un noeud Document.)
+
 // 2 - Attribute (obsolète)
-// 3 - Text node (Saut de ligne)
-// 8 - Comment
-// 9 - Document itself
-// 10 - Doctype
+// 8 - Comment (Un noeud Comment.)
+// 10 - Doctype(c'est-à-dire <!DOCTYPE html>)
 
 // Obtenir les nœuds d'éléments uniquement
 val = list.children;

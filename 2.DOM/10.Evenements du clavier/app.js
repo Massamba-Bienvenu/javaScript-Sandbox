@@ -1,13 +1,4 @@
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
-const select = document.querySelector('select');
-
-// Entrée vide
-taskInput.value = '';
-
 // form.addEventListener('submit', runEvent);
-
 // Keydown
 //taskInput.addEventListener('keydown', runEvent);
 // Keydown
@@ -25,6 +16,15 @@ taskInput.value = '';
 // Input
 // taskInput.addEventListener('input', runEvent);
 // Change
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+const select = document.querySelector('select');
+
+// Entrée vide
+taskInput.value = '';
+
 select.addEventListener('change', runEvent);
 
 function runEvent(e){

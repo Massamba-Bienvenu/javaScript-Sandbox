@@ -7,11 +7,11 @@ nouveauTitre.appendChild(document.createTextNode("faite votre choix"));
 parent.replaceChild(nouveauTitre, ancienTitre);
 
 // 2 Méthodes de suppressions de noeuds
-// Méthodes 1: Supprimer l'élément de la liste de noeud
+// Méthode 1: Supprimer l'élément de la liste de noeud
 const lis = document.querySelectorAll("li");
 lis[0].remove();
 
-// Methodes 1: Supprimer l'élément enfant
+// Méthode 1: Supprimer l'élément enfant
 const list = document.querySelector("ul");
 list.removeChild(lis[3]);
 
