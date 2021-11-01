@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input focus and blur events</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      [id="newTask"] {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid grey;
+        margin-bottom: 10px;
+        padding: 10px 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.php" method="post">
+      <label for="newTask"></label>
+      <input type="text" id="newTask" placeholder="New Task" /><br />
+      <input type="submit" value="soumettre" />
+    </form>
+
+    <script>
+      const inputFiled = document.querySelector("#newTask");
+      const labelField = document.querySelector("label");
+      inputFiled.addEventListener("focus", () => {
+        const label = inputFiled.getAttribute("placeholder");
+        labelField.innerText = `${label}`;
+        inputFiled.setAttribute("placeholder", "");
+      });
+
+      inputFiled.addEventListener("blur", () => {
+        const label = labelField.textContent;
+        labelField.innerText = "";
+        inputFiled.setAttribute("placeholder", label);
+        console.log(label);
+      });
+    </script>
+  </body>
+</html>

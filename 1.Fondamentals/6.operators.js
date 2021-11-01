@@ -47,7 +47,7 @@ console.log(x != 1);
 console.log(x.toString != 1);
 console.log(x.toString != "1");
 
-//5.    OPÉRATEURS TERNAIRES:
+//5.    L'opérateur (ternaire) conditionnel:
 //condition ? exprSiVrai : exprSiFaux
 let points = 100;
 let type = points > 100 ? "or" : "argent";

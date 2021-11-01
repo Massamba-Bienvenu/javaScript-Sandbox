@@ -1,41 +1,41 @@
+const heading = document.querySelector("h5");
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+//form, nous utiliseront souvent preventDefault() on soumettons form
+// car par défaut la soumission lancera la page " action="index.php""
+const taskInput = document.getElementById("task");
+// taskInput.value = "" // Cela effacera le champ de saisie
+
+// ÉVÉNEMENTS DE SOUMISSION DU FORMULAIRE
 // form.addEventListener('submit', runEvent);
+
 // Keydown
-//taskInput.addEventListener('keydown', runEvent);
-// Keydown
+// ÉVÉNEMENTS DE FORMULAIRE DE INPUT
+// taskInput.addEventListener('keydown', runEvent);
+// *Keydown*
 // taskInput.addEventListener('keyup', runEvent);
-// Keypress
+// *Keypress*
 // taskInput.addEventListener('keypress', runEvent);
-// Focus
+// *Focus* -- quand nous cliquons dans le champ
 // taskInput.addEventListener('focus', runEvent);
-// Blur
+// *Blur* -- quand nous cliquons en dehors du champ
 // taskInput.addEventListener('blur', runEvent);
-// Cut
+// *Cut*
 // taskInput.addEventListener('cut', runEvent);
-// Paste
+// *Paste*
 // taskInput.addEventListener('paste', runEvent);
-// Input
+// *Input* -- pour toute action dans input: saisie, couper, coller
 // taskInput.addEventListener('input', runEvent);
-// Change
+// *Change* -- fonctionne bien avec les select--> option
+// taskInput.addEventListener('change', runEvent);
 
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
-const select = document.querySelector('select');
-
-// Entrée vide
-taskInput.value = '';
-
-select.addEventListener('change', runEvent);
-
-function runEvent(e){
+select.addEventListener("change", runEvent);
+function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
 
   //console.log(e.target.value);
-
   // heading.innerText = e.target.value;
-
-  // Get input value
+  // Obtenir une valeur d'entrée
   // console.log(taskInput.value);
-
   // e.preventDefault();
 }
